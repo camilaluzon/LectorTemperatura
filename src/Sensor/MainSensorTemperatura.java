@@ -2,18 +2,18 @@ package Sensor;
 
 public class MainSensorTemperatura {
     static void main() {
-        SensorTemperatura st1= new SensorTemperatura();
-        SensorTemperatura st2= new SensorTemperatura();
+        SensorTemperatura sen1 = new SensorTemperatura();
+        SensorTemperatura sen2 = new SensorTemperatura();
 
-        st1.setIdsensor("2514v");
-        st1.setUnidad("c");
-        st1.setValoractual(-20);
+        sen1.setIdSensor("098Vsd");
+        sen1.setUnidad("f");
+        sen1.setValorActual(25.3);
 
-        st2.setIdsensor("245b");
-        st2.setUnidad("f");
-        st2.setValoractual(12);
+        sen2.setIdSensor("2568Vf");
+        sen2.setUnidad("c");
+        sen2.setValorActual(28.54);
 
-        st1.mostrarLectura();
-        st2.mostrarLectura();
+        sen1.mostrarInformacion();
+        sen2.mostrarInformacion();
     }
 }

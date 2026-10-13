@@ -1,40 +1,38 @@
 package Sensor;
 
-import java.util.Locale;
-
 public class SensorTemperatura {
-    private String idsensor;
-    private double valoractual;
+    private String idSensor;
+    private double valorActual;
     private String unidad;
 
-    public void setIdsensor(String idsensor){
-        if(idsensor != null && !idsensor.isBlank()){
-            this.idsensor=idsensor;
+    public void setIdSensor(String idSensor){
+        if (idSensor != null && !idSensor.isBlank()){
+            this.idSensor = idSensor;
         }
     }
-    public void setValoractual(double valoractual){
-        this.valoractual=valoractual;
+    public void setValorActual(double valorActual){
+        this.valorActual = valorActual;
     }
     public void setUnidad(String unidad){
-        if(unidad != null && !unidad.isBlank()){
+        if (unidad != null && !unidad.isBlank()){
             if (unidad.toUpperCase().equals("C") || unidad.toUpperCase().equals("F")){
-                unidad= unidad.toUpperCase();
-                this.unidad=unidad;
+                this.unidad = unidad.toUpperCase();
             }
         }
     }
 
-    public double getValoractual() {
-        return valoractual;
+    public String getIdSensor(){
+        return idSensor;
     }
-    public String getIdsensor() {
-        return idsensor;
+    public double getValorActual(){
+        return valorActual;
     }
-    public String getUnidad() {
+    public String getUnidad(){
         return unidad;
     }
 
-    public void mostrarLectura(){
-        System.out.println("Temperatura: " + getValoractual()+ " " +getUnidad());
+    public void mostrarInformacion(){
+        System.out.println("Temperatura: "+getValorActual()+getUnidad()+"°");
     }
+
 }
